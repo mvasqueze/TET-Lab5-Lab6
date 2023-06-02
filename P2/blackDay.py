@@ -1,31 +1,45 @@
 from mrjob.job import MRJob
-from datetime import datetime
-
-class listaAcciones(MRJob):
+from mrjob.step import MRStep
+class diaNegro(MRJob):
 
     def mapper(self, _, line):
         for w in line.split():
             filing = w.split(',')
-            comp = filing[0]
-            precio = float(filing[1])
-            fecha = datetime.strptime(filing[2].strip(), '%Y-%m-%d')
-            fechStr = fecha.strftime('%Y-%m-%d')
-            yield comp, (fechStr, precio)
+            yield filing[0], (float(filing[1]), filing[2])
 
-    def reducer(self, comp, values):
-        sorted_values = sorted(values, key=lambda x: x[0])
-        precioAnt = None
-        incremento = True
+    def reducer(self, key, values):
+        precios = list(values)
+        precioMin = min(precios, key=lambda x: x[0])
+        yield precioMin[1], 1
 
-        for fecha, precio in sorted_values:
-            if precioAnt is not None and precio < previous_price:
-                incremento = False
-                break
+    def menoresPrecios(self, key, values):
+        count = sum(values)
+        maxCount = 0
+        diaMax = None
 
-            previous_price = precio
+        if count > maxCount:
+            maxCount = count
+            diaMax = key
 
-        if incremento:
-            yield comp, 'Sube/Mantiene estable'
+        yield None, (diaMax, maxCount) 
+
+    def diaMax(self, _, pairs):
+        diaMaximo = None
+        maxCount = 0
+
+        for day, counter in pairs:
+            if counter > maxCount:
+                maxCount = counter
+                diaMaximo = day
+
+        yield diaMaximo, maxCount
+
+    def steps(self):
+        return [
+            MRStep(mapper=self.mapper, reducer=self.reducer),
+            MRStep(reducer=self.menoresPrecios),
+            MRStep(reducer=self.diaMax)
+        ]
 
 if __name__ == '__main__':
-    listaAcciones.run()
+    diaNegro.run()
