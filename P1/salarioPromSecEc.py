@@ -1,23 +1,25 @@
 from mrjob.job import MRJob
 
-class salarioPromEmp(MRJob):
+class salarioPromSecEc(MRJob):
 
     def mapper(self, _, line):
         for w in line.split():
             filing = w.split(',')
-            idemp = filing[0]
+            sececon = filing[1]
             salario = float(filing[2])
-            yield idemp, salario
+            yield sececon, salario
 
     def reducer(self, key, values):
-        totalSalarios = 0
+        salarioTotal = 0
         count = 0
 
         for salario in values:
-            totalSalarios += salario
+            salarioTotal += salario
             count += 1
 
-        yield key, totalSalarios / count
+        promedio = salarioTotal / count
+
+        yield key, promedio
 
 if __name__ == '__main__':
-    salarioPromEmp.run()
+    salarioPromSecEc.run()
