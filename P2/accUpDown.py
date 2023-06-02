@@ -22,10 +22,13 @@ class listaAcciones(MRJob):
                 incremento = False
                 break
 
-            previous_price = precio
+            precioAnt = precio
 
         if incremento:
-            yield comp, 'Sube/Mantiene estable'
+            yield comp, 'Sube/Estable'
+        else:
+            yield comp, 'Baja/Inestable'
+
 
 if __name__ == '__main__':
     listaAcciones.run()
