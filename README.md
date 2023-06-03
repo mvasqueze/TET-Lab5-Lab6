@@ -137,36 +137,79 @@ python wordcount-mr.py ./datasets/gutenberg-small/*.txt
 Resultado luego de correr Mr. Job en local.
 ![image](./Imágenes/17.png)
 
+
 Luego de copiar los datasets en el EMR, estos son entregado al Mr. Job y este es el output que se almacena en el EMR.
 ![image](./Imágenes/18.png)
 
-#Reto 3
+## Reto 3
+Para realizar correctamente los tres apartados del tercer reto es necesario clonar el presente repositorio. El repositorio fue clonado en la máquina que se usó para llevar a cabo los tutoriales anteriores:
 
-##1.1
-Usando el comando
+```
+git clone https://github.com/mvasqueze/TET-Lab5-Lab6.git
+cd TET-Lab5-Lab6
+```
+
+Hay una carpeta para cada uno de los siguientes apartados que contiene los códigos necesarios para obtener los resultados esperados.
+
+### Ejercicios 1
+Entrar a la carpeta P1 dentro del repositorio.
+```
+cd P1
+```
+
+#### 1.1
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p1-1 que está incluída en la carpeta admin del cluster:
+```
 python salarioPromSecEc.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/p1-1
+```
+Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p1-1/part-0000
+hdfs dfs -cat /user/admin/p1-1/part-0001
+hdfs dfs -cat /user/admin/p1-1/part-0002
+```
 
 Se obtuvieron los siguientes outputs:
 ![image](./Imágenes/a.png)
 
 
-##1.2
-Usando el comando
+####  1.2
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p1-2 que está incluída en la carpeta admin del cluster:
+
+```
  python salarioProm.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/p1-2
+```
  
+Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p1-2/part-0000
+hdfs dfs -cat /user/admin/p1-2/part-0001
+hdfs dfs -cat /user/admin/p1-2/part-0002
+``` 
+
+Se obtuvieron los siguientes outputs
  ![image](./Imágenes/b.png)
 
-## 1.3
 
-Usando el comando
- python secEmp.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:///user
-/admin/p1-3
+#### 1.3
 
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p1-2 que está incluída en la carpeta admin del cluster:
+```
+ python secEmp.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/p1-3
+```
+Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p1-3/part-0000
+hdfs dfs -cat /user/admin/p1-3/part-0001
+hdfs dfs -cat /user/admin/p1-3/part-0002
+``` 
+
+Se obtuvieron los siguientes outputs
 ![image](./Imágenes/c.png)
 
-#Reto 2
+### Reto 2
 
-## 2.1
+#### 2.1
 Con el comando
 
  python diaMinMax.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///user/admin/p2-1
