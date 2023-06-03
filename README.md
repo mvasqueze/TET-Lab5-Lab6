@@ -190,7 +190,6 @@ hdfs dfs -cat /user/admin/p1-2/part-0002
 Se obtuvieron los siguientes outputs
  ![image](./Imágenes/b.png)
 
-
 #### 1.3
 
 Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p1-3 que está incluída en la carpeta admin del cluster:
