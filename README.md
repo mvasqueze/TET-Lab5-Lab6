@@ -193,7 +193,7 @@ Se obtuvieron los siguientes outputs
 
 #### 1.3
 
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p1-2 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p1-3 que está incluída en la carpeta admin del cluster:
 ```
  python secEmp.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/p1-3
 ```
@@ -207,78 +207,165 @@ hdfs dfs -cat /user/admin/p1-3/part-0002
 Se obtuvieron los siguientes outputs
 ![image](./Imágenes/c.png)
 
-### Reto 2
+### Ejercicios 2
+Entrar a la carpeta P2 dentro del repositorio.
+```
+cd ..
+cd P2
+```
 
 #### 2.1
-Con el comando
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p2-1 que está incluída en la carpeta admin del cluster:
 
+```
  python diaMinMax.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///user/admin/p2-1
+```
  
+ Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p2-1/part-0000
+hdfs dfs -cat /user/admin/p2-1/part-0001
+hdfs dfs -cat /user/admin/p2-1/part-0002
+``` 
+Se otuvieron los siguientes outputs: 
  ![image](./Imágenes/d.png)
 
-## 2.2
-Con el comando 
- python accUpDown.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///us
-er/admin/p2-2
-
+#### 2.2
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p2-2 que está incluída en la carpeta admin del cluster:
+```
+python accUpDown.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///user/admin/p2-2
+```
+Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p2-2/part-0000
+hdfs dfs -cat /user/admin/p2-2/part-0001
+hdfs dfs -cat /user/admin/p2-2/part-0002
+``` 
+Se otuvieron los siguientes outputs:
 ![image](./Imágenes/e.png)
 
-## 2.3
-Con el comando
-python blackDay.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///use
-r/admin/p2-3
+#### 2.3
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p2-3 que está incluída en la carpeta admin del cluster:
 
+```
+python blackDay.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///user/admin/p2-3
+```
+Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p2-3/part-0000
+hdfs dfs -cat /user/admin/p2-3/part-0001
+hdfs dfs -cat /user/admin/p2-3/part-0002
+``` 
+Se otuvieron los siguientes outputs:
 ![image](./Imágenes/f.png)
 
-#Reto 3
+### Ejercicios 3
 
-##3.1
-Con el comando
+Entrar a la carpeta P3 dentro del repositorio.
+```
+cd ..
+cd P3
+```
+
+#### 3.1
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-1 que está incluída en la carpeta admin del cluster:
+```
  python pelUsuarioRating.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-1
- 
+```
+Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p3-1/part-0000
+hdfs dfs -cat /user/admin/p3-1/part-0001
+hdfs dfs -cat /user/admin/p3-1/part-0002
+``` 
+Se otuvieron los siguientes outputs: 
  ![image](./Imágenes/g.png)
 
 ##3.2
-Con el comando
- python masPel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user
-/admin/p3-2
-
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-2 que está incluída en la carpeta admin del cluster:
+```
+python masPel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-2
+```
+ Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p3-2/part-0000
+hdfs dfs -cat /user/admin/p3-2/part-0001
+hdfs dfs -cat /user/admin/p3-2/part-0002
+``` 
+Se otuvieron los siguientes outputs: 
 ![image](./Imágenes/h.png)
 
-##3.3
-Con el comando
-python menosPel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///us
-er/admin/p3-3
-
+#### 3.3
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-3 que está incluída en la carpeta admin del cluster:
+```
+python menosPel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-3
+```
+ Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p3-3/part-0000
+hdfs dfs -cat /user/admin/p3-3/part-0001
+hdfs dfs -cat /user/admin/p3-3/part-0002
+``` 
+Se otuvieron los siguientes outputs: 
 ![image](./Imágenes/i.png)
 
-##3.4
-Con el comando
+#### 3.4
 
-python singlePel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///u
-ser/admin/p3-4
-
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-4 que está incluída en la carpeta admin del cluster:
+```
+python singlePel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-4
+```
+ Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p3-4/part-0000
+hdfs dfs -cat /user/admin/p3-4/part-0001
+hdfs dfs -cat /user/admin/p3-4/part-0002
+``` 
+Se otuvieron los siguientes outputs: 
 ![image](./Imágenes/j.png)
 
-##3.5
-Con el comando
- python peorProm.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///us
-er/admin/p3-5
-
+#### 3.5
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-5 que está incluída en la carpeta admin del cluster:
+```
+python peorProm.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-5
+```
+ Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p3-5/part-0000
+hdfs dfs -cat /user/admin/p3-5/part-0001
+hdfs dfs -cat /user/admin/p3-5/part-0002
+``` 
+Se otuvieron los siguientes outputs: 
 ![image](./Imágenes/k.png)
 
-##3.6
-Con el comando
-python mejorProm.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///u
-ser/admin/p3-6
-
+#### 3.6
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-6 que está incluída en la carpeta admin del cluster:
+```
+python mejorProm.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-6
+```
+ Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p3-6/part-0000
+hdfs dfs -cat /user/admin/p3-6/part-0001
+hdfs dfs -cat /user/admin/p3-6/part-0002
+``` 
+Se otuvieron los siguientes outputs: 
 ![image](./Imágenes/l.png)
 
-##3.7
-Con el comando
- python genero.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user
-/admin/p3-7
-
+#### 3.7
+Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-7 que está incluída en la carpeta admin del cluster:
+```
+python genero.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-7
+```
+ Es posible consultar el output a partir de los siguientes comandos:
+```
+hdfs dfs -cat /user/admin/p3-7/part-0000
+hdfs dfs -cat /user/admin/p3-7/part-0001
+hdfs dfs -cat /user/admin/p3-7/part-0002
+``` 
+Se otuvieron los siguientes outputs: 
 ![image](./Imágenes/m.png)
 
- 
+## Diagrama
+
+https://drive.google.com/file/d/1A6KXFej3AU7aGagj35IUXBm0zq6Ir-ED/view?usp=sharing
