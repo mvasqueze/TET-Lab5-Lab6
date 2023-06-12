@@ -174,7 +174,7 @@ Se obtuvieron los siguientes outputs:
 
 
 ####  1.2
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p1-2 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el salario promedio por empleado, representado por su ID; los outputs serán almacenados en la carpeta p1-2 que está incluída en la carpeta admin del cluster:
 
 ```
  python salarioProm.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/p1-2
@@ -192,7 +192,7 @@ Se obtuvieron los siguientes outputs
 
 #### 1.3
 
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p1-3 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener la cantidad de sectores económicos correspondientes a cada empleado, representado por su ID; los outputs serán almacenados en la carpeta p1-3 que está incluída en la carpeta admin del cluster:
 ```
  python secEmp.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:///user/admin/p1-3
 ```
@@ -214,7 +214,7 @@ cd P2
 ```
 
 #### 2.1
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p2-1 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener, para cada una de las empresas, el día en que más valor tenían sus acciones y el día en que menos valor tenían ; los outputs serán almacenados en la carpeta p2-1 que está incluída en la carpeta admin del cluster:
 
 ```
  python diaMinMax.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///user/admin/p2-1
@@ -230,7 +230,7 @@ Se otuvieron los siguientes outputs:
  ![image](./Imágenes/d.png)
 
 #### 2.2
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p2-2 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el comportamiento de las acciones de cada una de las empresas (si suben, bajan o se mantienen estables), representadas por su nombre; los outputs serán almacenados en la carpeta p2-2 que está incluída en la carpeta admin del cluster:
 ```
 python accUpDown.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///user/admin/p2-2
 ```
@@ -244,7 +244,7 @@ Se otuvieron los siguientes outputs:
 ![image](./Imágenes/e.png)
 
 #### 2.3
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p2-3 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el día negro, es decir, el día en que las acciones tuvieron el valor más bajo; los outputs serán almacenados en la carpeta p2-3 que está incluída en la carpeta admin del cluster:
 
 ```
 python blackDay.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:///user/admin/p2-3
@@ -267,7 +267,7 @@ cd P3
 ```
 
 #### 3.1
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-1 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el promedio de los rating (calificación de 0 a 5.0) dados por cada usuario (representado por su ID) y el número de ratings que ha hecho; los outputs serán almacenados en la carpeta p3-1 que está incluída en la carpeta admin del cluster:
 ```
  python pelUsuarioRating.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-1
 ```
@@ -281,7 +281,7 @@ Se otuvieron los siguientes outputs:
  ![image](./Imágenes/g.png)
 
 ##3.2
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-2 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el día en que el se vieron más películas, y la cantidad de películas vistas; los outputs serán almacenados en la carpeta p3-2 que está incluída en la carpeta admin del cluster:
 ```
 python masPel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-2
 ```
@@ -295,7 +295,7 @@ Se otuvieron los siguientes outputs:
 ![image](./Imágenes/h.png)
 
 #### 3.3
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-3 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el día en que el se vieron menos películas, y la cantidad de películas vistas; los outputs serán almacenados en la carpeta p3-3 que está incluída en la carpeta admin del cluster:
 ```
 python menosPel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-3
 ```
@@ -310,7 +310,7 @@ Se otuvieron los siguientes outputs:
 
 #### 3.4
 
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-4 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener los usuarios (representados por su ID) que vieron una sola película, así como el rating que le dieron; los outputs serán almacenados en la carpeta p3-4 que está incluída en la carpeta admin del cluster:
 ```
 python singlePel.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-4
 ```
@@ -324,7 +324,7 @@ Se otuvieron los siguientes outputs:
 ![image](./Imágenes/j.png)
 
 #### 3.5
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-5 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el día con los peores ratings, así como el promedio de los ratings dados por el usuario; los outputs serán almacenados en la carpeta p3-5 que está incluída en la carpeta admin del cluster:
 ```
 python peorProm.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-5
 ```
@@ -338,7 +338,7 @@ Se otuvieron los siguientes outputs:
 ![image](./Imágenes/k.png)
 
 #### 3.6
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-6 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener el día con los mejores ratings, así como el promedio de los ratings dados por el usuario; los outputs serán almacenados en la carpeta p3-6 que está incluída en la carpeta admin del cluster:
 ```
 python mejorProm.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-6
 ```
@@ -352,7 +352,7 @@ Se otuvieron los siguientes outputs:
 ![image](./Imágenes/l.png)
 
 #### 3.7
-Usando el siguiente comando es posible obtener el salario promedio por sector económico; los outputs serán almacenados en la carpeta p3-7 que está incluída en la carpeta admin del cluster:
+Usando el siguiente comando es posible obtener la mejor y la peor película por cada género basado en sus ratings, representadas por su ID; los outputs serán almacenados en la carpeta p3-7 que está incluída en la carpeta admin del cluster:
 ```
 python genero.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:///user/admin/p3-7
 ```
